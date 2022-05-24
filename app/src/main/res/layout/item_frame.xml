@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/office_item"
+    android:layout_width="match_parent"
+    android:layout_height="570dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    app:cardElevation="8dp">
+
+    <ImageButton
+        android:id="@+id/like_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="508dp"
+        android:background="@drawable/designer_like_icon" />
+
+    <ImageView
+        android:id="@+id/codi_image"
+        android:layout_width="306dp"
+        android:layout_height="385dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="88dp"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/desi_profile_ID"
+        android:layout_width="80dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="515dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/comfortaa"
+        android:lineHeight="40sp"
+        android:text=""
+        android:textAppearance="@style/item_name_style" />
+
+    <TextView
+        android:id="@+id/desi_profile_like"
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="243dp"
+        android:layout_marginTop="515dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center"
+        android:lineHeight="18sp"
+        android:text=""
+        android:textAppearance="@style/item_name_style" />
+
+    <TextView
+        android:id="@+id/codi_category"
+        android:layout_width="149dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="34dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/comfortaa"
+        android:lineHeight="40sp"
+        android:text=""
+        android:textAppearance="@style/item_name_style" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/desi_profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:background="@drawable/ellipse" />
+
+
+</androidx.cardview.widget.CardView>

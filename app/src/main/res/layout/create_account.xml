@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/login_frame"
+        android:background="@drawable/login_frame"  >
+
+
+        <EditText
+            android:id="@+id/create_ID_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="232dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center|left"
+            android:hint="@string/ID"
+            android:inputType="text"
+            android:paddingLeft="15dp" />
+
+        <EditText
+            android:id="@+id/create_username_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="312dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:gravity="center|left"
+            android:hint="@string/username" />
+
+        <EditText
+            android:id="@+id/create_password_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="392dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:hint="@string/password"
+            android:gravity="center|left"/>
+
+        <EditText
+            android:id="@+id/create_confirm_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="472dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:hint="@string/confirm_pas"
+            android:gravity="center|left" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/create_account_Btn"
+            android:layout_width="306dp"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="552dp"
+            android:background="@drawable/rectangle_2"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:lineHeight="18sp"
+            android:text="@string/create_acco"
+            android:textAppearance="@style/create_acco"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

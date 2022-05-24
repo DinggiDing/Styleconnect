@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_frame" >
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_high"
+            android:layout_marginTop="130dp"/>
+
+        <EditText
+            android:id="@+id/ID_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="312dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:hint="@string/ID"
+            android:inputType="text"
+            android:gravity="center|left"
+            android:paddingLeft="15dp" />
+
+
+        <EditText
+            android:id="@+id/password_EditText"
+            android:layout_width="306dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="392dp"
+            android:background="@drawable/rectangle_4"
+            android:elevation="4dp"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center|left"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_Btn"
+            android:layout_width="306dp"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="472dp"
+            android:background="@drawable/rectangle_1"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:text="@string/log_in"
+            android:textAppearance="@style/log_in"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forgot_Btn"
+            android:layout_width="262dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="57dp"
+            android:layout_marginTop="537dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:text="@string/forgot_your"
+            android:textAppearance="@style/forgot_your"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signup_Btn"
+            android:layout_width="379dp"
+            android:layout_height="83dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="703dp"
+            android:background="@drawable/rectangle_4"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:text="@string/don_t_have_"
+            android:textAppearance="@style/don_t_have_" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

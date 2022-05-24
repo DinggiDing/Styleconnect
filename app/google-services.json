@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "443035281640",
+    "project_id": "share-c4a93",
+    "storage_bucket": "share-c4a93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443035281640:android:25fff698ffe66b2a62415d",
+        "android_client_info": {
+          "package_name": "com.example.styleconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443035281640-dlgn3mmfe9gjmk6uhirri0d5p4mtfqli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACBoFkk9-SU7tvyGRoZywe5m_Qg1BckzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443035281640-dlgn3mmfe9gjmk6uhirri0d5p4mtfqli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

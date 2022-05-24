@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Styleconnect</string>
+    <string name="ID">ID</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="forgot_your">Forgot your password?</string>
+    <string name="don_t_have_">Don\'t have an account? Sign up.</string>
+    <string name="confirm_pas">Confirm Password</string>
+    <string name="create_acco">Create Account</string>
+    <string name="change_pass">Change Password</string>
+    <string name="delete_acco">Delete Account</string>
+    <string name="jane">Jane</string>
+    <string name="janelee_90">/@Janelee__90</string>
+    <string name="family"># Family</string>
+    <string name="card_membership_">Membership Level</string>
+    <string name="card_family">Family</string>
+    <string name="some_id">코디 추천수</string>
+    <string name="some_num">106 개</string>
+    <string name="coady">Coadi</string>
+    <string name="Casual">캐주얼</string>
+    <string name="Sports">스포츠</string>
+    <string name="Office">오피스</string>
+</resources>
