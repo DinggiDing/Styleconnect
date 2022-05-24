@@ -40,9 +40,6 @@ public class LeftTab extends AppCompatActivity {
 
     private RecyclerView R_codi_list;    // 코디 출력 리사이클러 뷰
 
-    //private FirebaseFirestore db;                 // firebase
-    //private StorageReference mStorageReference;   // storage
-
     private String ID;           // 사용자 ID
     private String Clothes_Type; // 카테고리
     private String desi_ID;      // 디자이너 ID
@@ -112,8 +109,7 @@ public class LeftTab extends AppCompatActivity {
         // 각 카테고리 폴더에서 모든 이미지 추출 후 각 리스트에 저장
         ListUp(c_fullpass, codi_items);
 
-// 카테고리별 CodiItem들 저장
-
+        // 카테고리별 CodiItem들 저장
         codi_adapter = new CodiAdapter(codi_items, ID);
         R_codi_list.setAdapter(codi_adapter);
 

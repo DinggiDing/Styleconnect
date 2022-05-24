@@ -107,7 +107,7 @@
             android:layout_marginStart="6dp"
             android:layout_marginTop="175dp"
             android:layout_marginEnd="6dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="56dp"
             android:visibility="visible"
             tools:listitem="@layout/item_frame" />
 
