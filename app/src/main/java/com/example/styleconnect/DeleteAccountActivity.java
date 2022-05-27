@@ -66,7 +66,7 @@ public class DeleteAccountActivity extends AppCompatActivity {
             @Override
             public void onSuccess(Void unused) {
                 Toast.makeText(DeleteAccountActivity.this, "Delete Success", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginAccountActivity.class);
                 startActivity(intent);
             }
         }).addOnFailureListener(new OnFailureListener() {

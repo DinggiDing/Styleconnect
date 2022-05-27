@@ -66,6 +66,7 @@ public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 DesignerLikeUpdate(ID, item.getDesi_ID(), 1, holder.like_num);
+                getLikeNum(item.getDesi_ID(), holder.like_num);
             }
         });
 
