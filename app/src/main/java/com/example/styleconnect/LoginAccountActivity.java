@@ -3,6 +3,7 @@ package com.example.styleconnect;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,6 +29,8 @@ public class LoginAccountActivity extends AppCompatActivity {
         db= FirebaseFirestore.getInstance();
         ID_ET=findViewById(R.id.ID_EditText);
         password_ET=findViewById(R.id.password_EditText);
+
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         login_Btn=findViewById(R.id.login_Btn);     //로그인 버튼 클릭 시
         login_Btn.setOnClickListener(new View.OnClickListener() {

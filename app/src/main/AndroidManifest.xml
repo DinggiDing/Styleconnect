@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/TabTheme">
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
         <activity
             android:name=".LoginAccountActivity"
             android:exported="true">

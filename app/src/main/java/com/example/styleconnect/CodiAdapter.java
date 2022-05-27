@@ -26,10 +26,14 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.List;
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.TreeMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
+
 
     private List<CodiItem> mDataList;    // item들의 데이터 저장 공간
     private StorageReference mStorageReference;
@@ -37,6 +41,17 @@ public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
     private Context context;
     private String ID;
     private final Long numArr[] = {Long.valueOf(0)};
+
+    // (수정 bj hj 5/27)
+    private static final NavigableMap<Long, String> suffixes = new TreeMap<>();
+    static {
+        suffixes.put(1_000L, "k");
+        suffixes.put(1_000_000L, "M");
+        suffixes.put(1_000_000_000L, "G");
+        suffixes.put(1_000_000_000_000L, "T");
+        suffixes.put(1_000_000_000_000_000L, "P");
+        suffixes.put(1_000_000_000_000_000_000L, "E");
+    }
 
     public CodiAdapter(List<CodiItem> dataList, String ID) {
         this.ID = ID;
@@ -149,12 +164,22 @@ public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
 
     }
 
-    //숫자 단위 변경함수 추가(by hj 5/24)
-    private static String formatNumber(long count) {
-        long real_num = count;
-        if (count < 1000) return "" + count;
-        int exp = (int) (Math.log(count) / Math.log(1000));
-        return String.format("%.1f %c", count / Math.pow(1000, exp),"kMGTPE".charAt(exp-1));
+    //숫자 단위 변경함수 추가(by hj 5/27)
+    private static String formatNumber(long value) {
+
+        //Long.MIN_VALUE == -Long.MIN_VALUE so we need an adjustment here
+        if (value == Long.MIN_VALUE) return formatNumber(Long.MIN_VALUE + 1);
+        if (value < 0) return "-" + formatNumber(-value);
+        if (value < 1000) return Long.toString(value); //deal with easy case
+
+        Map.Entry<Long, String> e = suffixes.floorEntry(value);
+        Long divideBy = e.getKey();
+        String suffix = e.getValue();
+
+        long truncated = value / (divideBy / 10); //the number part of the output times 10
+        boolean hasDecimal = truncated < 100 && (truncated / 10d) != (truncated / 10);
+        return hasDecimal ? (truncated / 10d) + suffix : (truncated / 10) + suffix;
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
