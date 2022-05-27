@@ -26,6 +26,7 @@ public class fragment_tab2 extends Fragment {
     ArrayList<allele> list;
     albumListAdapter mAdapter;
     FirebaseFirestore db;
+    private String ID;
 
     public fragment_tab2() {
 
@@ -43,13 +44,14 @@ public class fragment_tab2 extends Fragment {
         db = FirebaseFirestore.getInstance();
 
         GridView gridView = (GridView) myfragmentView.findViewById(R.id.gridView);
+        ID = AccountId.getInstance().getAccount_id();
 
         list = new ArrayList<>();
         mAdapter = new albumListAdapter(getActivity(), R.layout.album_items, list);
         gridView.setAdapter(mAdapter);
 
         db.collection("person").document("customer").
-                collection("id").document("jae7151").
+                collection("id").document(ID).
                 collection("closet").whereEqualTo("clo_item", "하의").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

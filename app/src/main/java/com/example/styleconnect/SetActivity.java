@@ -55,6 +55,7 @@ public class SetActivity extends AppCompatActivity {
     int img_id = 0;
     String radio_id = "상의";
     String image_name = "";
+    private String ID;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -62,6 +63,7 @@ public class SetActivity extends AppCompatActivity {
         setContentView(R.layout.activity_set);
 
         init();
+        ID = AccountId.getInstance().getAccount_id();
 
         invisible(0);
         btnChoose.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +101,7 @@ public class SetActivity extends AppCompatActivity {
                 clo.put("clo_item", radio_id);
                 clo.put("clo_name", image_name);
                 db.collection("person").document("customer").
-                        collection("id").document("jae7151").
+                        collection("id").document(ID).
                         collection("closet").add(clo)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
@@ -151,7 +153,7 @@ public class SetActivity extends AppCompatActivity {
             //path = getPathFromURI(uri);
             Glide.with(this).load(uri).into(imageView);
             StorageReference storageRef = storage.getReference();
-            String img_path = "jae7151" + "_" + getTime() + ".png";
+            String img_path = ID + "_" + getTime() + ".png";
             path = img_path;
             StorageReference imageRef = storageRef.child(img_path);
             UploadTask uploadTask = imageRef.putFile(uri);
