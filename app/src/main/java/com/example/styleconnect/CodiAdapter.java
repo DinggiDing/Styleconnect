@@ -124,6 +124,7 @@ public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
                 if(documentSnapshot.exists()){
                     long num=Long.parseLong(documentSnapshot.getString("like"));
                     String num_format=formatNumber(num);
+                    Log.d("PPPTAG", num_format);
                     likeNum.setText(num_format);
                 }else{
                     Toast.makeText(context, "Document not exists", Toast.LENGTH_SHORT).show();
@@ -169,7 +170,7 @@ public class CodiAdapter extends RecyclerView.Adapter<CodiAdapter.ViewHolder> {
 
         //Long.MIN_VALUE == -Long.MIN_VALUE so we need an adjustment here
         if (value == Long.MIN_VALUE) return formatNumber(Long.MIN_VALUE + 1);
-        if (value < 0) return "-" + formatNumber(-value);
+        if (value < 0) return formatNumber(0);   //***: 수정부분 -1 ->0 으로
         if (value < 1000) return Long.toString(value); //deal with easy case
 
         Map.Entry<Long, String> e = suffixes.floorEntry(value);
